@@ -1,6 +1,6 @@
 
 import Home from './Home.jsx'
-import React, { useEffect } from 'react'
+import React from 'react'
 
  function App() {
 
