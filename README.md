@@ -16,3 +16,4 @@ $ cd SOSE-REACT
 $ npm install
 $ npm run dev #optional
 ```
+#### Made By Coding Team @ SOSE Sec 5 
