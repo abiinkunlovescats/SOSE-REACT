@@ -126,7 +126,9 @@ section {
 }
 
 .header .navbar {
-  position: relative;
+  position: center;
+  /* margin: 100%; */
+  justify-content: center;
 }
 
 .header .navbar #close-navbar {
