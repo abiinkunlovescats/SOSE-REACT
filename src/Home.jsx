@@ -17,9 +17,7 @@ function Home() {
 
     return (
         <React.Fragment>
-            <Header passData={passData} />
-
-            <Account showAccountform={showForm} />
+           
             {/* account form section ends */}
             {/* header section ends */}
             {/* home section starts  */}
@@ -161,18 +159,12 @@ function Home() {
                 </div>
             </Swiper>
             
-            <Footer/>
+            
         </React.Fragment>
     )
 }
 
-function Account(showAccountform){
-    if (showAccountform ==true){
-        return<AccountForm/>
-    }else{
-        return <div></div>
-    }
-}
+
 export default Home
 
 
