@@ -1,6 +1,6 @@
-import { useRef } from "react";
 
-export default function AccountForm(showAccountform) {
+
+export default function AccountForm() {
     return <div  className={"active account-form"}>
         <div id="close-form" className="fas fa-times" />
         <div className="buttons">

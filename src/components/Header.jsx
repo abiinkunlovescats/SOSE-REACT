@@ -1,25 +1,28 @@
-const Header = props => {
-    
-    const buttonClickHandler = () => {
-        let showAccountform = true;
-        props.passData(showAccountform);
-    }
-    return <header className="header">
-        <a href="#" className="logo">
+import React,{ useState} from "react";
+import AccountForm from "./AccountForm";
+import { Link } from "react-router-dom";
+function Header() {
+    const [isOpen, setIsOpen] = useState(true)
+    return <React.Fragment>
+    <header className="header">
+        <Link to="/" className="logo">
             {" "}
             ASOSE{" "}
-        </a>
+        </Link>
         <nav className="navbar">
             <div id="close-navbar" className="fas fa-times" />
-            <a href="home.html">home</a>
-            <a href="about.html">about</a>
-            <a href="courses.html">courses</a>
-            <a href="contact.html">contact</a>
+            <Link to='/'>Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/courses">Courses</Link>
+            <Link to="/contacts">Contact</Link>
         </nav>
         <div className="icons">
-            <div id="account-btn" onClick={buttonClickHandler} className="fas fa-user" />
+            <div id="account-btn" onClick={() => setIsOpen(false)} className="fas fa-user" />
             <div id="menu-btn" className="fas fa-bars" />
         </div>
-    </header>;
+    </header>
+    {isOpen ? null : <AccountForm/>}
+    </React.Fragment>;
+
 }
 export default Header;
