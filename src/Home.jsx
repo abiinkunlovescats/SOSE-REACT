@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Header from "./components/Header";
 import HomeHeader from "./components/HomeHeader";
 import AccountForm from "./components/AccountForm"
-import {Swiper} from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import "swiper/css/bundle";
 import dmd from "./assets/dmd.png"
 import subject2 from "./assets/subject-icon-2.png";
@@ -17,7 +17,9 @@ function Home() {
 
     return (
         <React.Fragment>
-           
+            
+
+            
             {/* account form section ends */}
             {/* header section ends */}
             {/* home section starts  */}
@@ -55,11 +57,20 @@ function Home() {
             </section>
             {/* subjects section ends */}
             {/* home courses slider section starts  */}
-            <Swiper className="home-courses" loop={true} grabCursor={true} spaceBetween= {20} >
+            <section className="home-courses .home-courses-slider" >
                 <h1 className="heading"> Our Popular Skills </h1>
-                <div className="swiper home-courses-slider">
+                <Swiper className="swiper home-courses-slider" loop={true} grabCursor={true} spaceBetween={20} breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  991: {
+                    slidesPerView: 3,
+                  },}}>
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide slide">
+                        <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/public/Course1-1.png" alt="" />
                                 <h3>Coding</h3>
@@ -74,8 +85,8 @@ function Home() {
                                     read more
                                 </a>
                             </div>
-                        </div>
-                        <div className="swiper-slide slide">
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/public/robotics.png" alt="" />
                                 <h3>Robotics</h3>
@@ -90,8 +101,8 @@ function Home() {
                                     read more
                                 </a>
                             </div>
-                        </div>
-                        <div className="swiper-slide slide">
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/public/fashion bg.png" alt="" />
                                 <h3>Fashion Designing</h3>
@@ -106,8 +117,8 @@ function Home() {
                                     read more
                                 </a>
                             </div>
-                        </div>
-                        <div className="swiper-slide slide">
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/public/dmd1.png" alt="" />
                                 <h3>Digital Media &amp; Design</h3>
@@ -122,8 +133,8 @@ function Home() {
                                     read more
                                 </a>
                             </div>
-                        </div>
-                        <div className="swiper-slide slide">
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/public/finance.png" alt="" />
                                 <h3>Finance &amp; Accounting</h3>
@@ -138,8 +149,8 @@ function Home() {
                                     read more
                                 </a>
                             </div>
-                        </div>
-                        <div className="swiper-slide slide">
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide slide">
                             <div className="image">
                                 <img src="/public/emp2.png" alt="" />
                                 <h3>Electro Machanical Production</h3>
@@ -154,12 +165,12 @@ function Home() {
                                     read more
                                 </a>
                             </div>
-                        </div>
+                        </SwiperSlide>
                     </div>
-                </div>
-            </Swiper>
+                </Swiper>
+            </section>
             
-            
+
         </React.Fragment>
     )
 }
