@@ -20,10 +20,24 @@ function App() {
           <Route exact path="contacts" element ={<Contact/>} />
         </Routes>
 
+<<<<<<< HEAD
         <Footer />
       </Router>
     </React.Fragment>
   );
+=======
+import Home from './Home.jsx'
+import React from 'react'
+
+ function App() {
+
+    return (
+        <React.Fragment>
+            {/* //kdnskf */}
+            <Home />
+        </React.Fragment>
+    )
+>>>>>>> fd64bdf221249e41ea9645bc7978c5b6178f78a0
 }
 
 export default App;
